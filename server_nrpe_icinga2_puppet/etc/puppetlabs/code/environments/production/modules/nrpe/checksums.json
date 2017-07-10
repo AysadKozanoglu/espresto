@@ -1,0 +1,21 @@
+{
+  "CHANGELOG.md": "7de824a3f749326b1f19f9030318a038",
+  "Gemfile": "9e450ec9c95a52cbcf910a2691adb0f4",
+  "LICENSE": "e60b5dc6c059681201d7820c1b13081d",
+  "README.md": "2c57aef710a8ea3748b4e7a82be648fa",
+  "Rakefile": "f66d9aad26eaf146b4f91ce885b53c3b",
+  "manifests/command.pp": "b19355b5874c22493c384faccde6d374",
+  "manifests/init.pp": "1271f75ed0ba7b5fa02e63240d36d0c0",
+  "manifests/params.pp": "f83a056a91c453a009cee622e4474212",
+  "manifests/plugin.pp": "88c35ce9e64bc8733a1b508dd60139d4",
+  "metadata.json": "e496e8bd8a57ccb32f926749861400a8",
+  "spec/classes/nrpe_spec.rb": "3b4638ec1938143c67d00064ac9ef01c",
+  "spec/defines/command_spec.rb": "6d4f3aca31b7376e88fab011a8ac3b2e",
+  "spec/defines/plugin_spec.rb": "4d82d03e156474a4fb4b6f34d016dae5",
+  "spec/spec_helper.rb": "1f0042a79b58c79e8520cc83073ec026",
+  "templates/command.cfg.erb": "a2eb66b0893cd6c1d6dc8d2b6dea981b",
+  "templates/nrpe.cfg.erb": "f24340d4e9e22614f132a06a4bc88e14",
+  "tests/default_commands.pp": "b5aedecee4926bc6a89af5facae7e185",
+  "tests/init.pp": "d7967f5c86868c10884825b0768ae9e2",
+  "tests/purge_commands.pp": "edbce528bfa9c33f80768eb8e6b09db6"
+}

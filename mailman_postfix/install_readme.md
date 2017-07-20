@@ -17,7 +17,6 @@ apt-get install postfix
 </pre>
 internet site
 
-
 after installation of postfix you need to do the following things
 
 Edit /etc/postfix/main.cf
@@ -29,6 +28,10 @@ Ensure that in virtual_maps there's this entry: hash:/var/lib/mailman/data/virtu
 Ensure that in alias_maps there's this entry: hash:/var/lib/mailman/data/aliases
 
 Save & quit this file
+
+<b>important:</b> 
+if you change <b>/etc/aliases </b> than call command <i>newaliases</i> on CLI
+and check if the alias_map is corretly setted by postfix by <i>postconf alias_maps</i>
 
 Now you need to edit Mailman's config file
 

@@ -15,7 +15,7 @@ Now if you want to install postfix in debian follow this link http://www.debianh
 <pre>
 apt-get install postfix  
 </pre>
-# internet site
+internet site
 
 
 after installation of postfix you need to do the following things
@@ -70,4 +70,4 @@ Alias /images/mailman/ /usr/share/images/mailman/
 
 
 
-###[Aysad Kozanoglu | Espresto AG]###
+### [Aysad Kozanoglu | Espresto AG] ###

@@ -115,4 +115,7 @@ create the file <i>..virtual_alias</i> and include your wildcard for needed doma
 </pre>
 remap postfix with alias <pre> newaliases && postmap /etc/postfix/virtual_alias  && systemctl reload postfix.service</pre>
 
+info: the example are all from prod environment tested. 
+
+
 ### [Aysad Kozanoglu | Espresto AG] ###

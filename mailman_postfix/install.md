@@ -1,8 +1,8 @@
  Install Mailman in Debian
 
-
-#apt-get install mailman
-
+<pre>
+apt-get install mailman
+</pre>
 This will install the latest version of mailman and apache
 
 active cgi module for apache 

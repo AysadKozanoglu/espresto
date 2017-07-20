@@ -6,12 +6,15 @@ apt-get install mailman
 This will install the latest version of mailman and apache
 
 active cgi module for apache 
+<pre>
 a2enmod cgi
 systemctl restart apache.service
+</pre>
 
 Now if you want to install postfix in debian follow this link http://www.debianhelp.co.uk/postfix.htm
+<pre>
 apt-get install postfix  
-
+</pre>
 # internet site
 
 
@@ -46,14 +49,12 @@ Type newlist <list_name>@<my.domain1.com>, and answer the questions.
 Type /usr/lib/mailman/bin/genaliases, which will update /var/lib/mailman/data/aliases and var/lib/mailman/data/virtual-mailman accordingly
 
 Now restart mailman to take our new settings
-
-#/etc/init.d/mailman force-reload
-
+<pre>
+/etc/init.d/mailman force-reload
+</pre>
 Mailman will integrate itself into your webserver if you're running Apache or Apache2
 
 otherwise copy /etc/mailman/apache.conf to /etc/apache2/sites-enabled/
-
-
 
 If you want install apache2 in debian follow this link http://www.debianhelp.co.uk/apache2.htm
 
@@ -69,4 +70,4 @@ Alias /images/mailman/ /usr/share/images/mailman/
 
 
 
-[Aysad Kozanoglu | Espresto AG]
+###[Aysad Kozanoglu | Espresto AG]###

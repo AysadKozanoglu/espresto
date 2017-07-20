@@ -71,7 +71,7 @@ Alias /pipermail/ /var/lib/mailman/archives/public/
 
 Alias /images/mailman/ /usr/share/images/mailman/
 
-## for postfix multiple domains
+## for postfix virtual multi domain and wildcard email acceptions
 
 <b>Define the domain list(multiple domains acceptions) as hash file or as list in the config file. </b>
 <pre>
@@ -93,7 +93,7 @@ example from prod:
 mydestination = example.net, mailman.example.com, localhost
 </pre>
 
-<b> define aliases  (also for multiple domains valid) </b>
+<b> define aliases  (the users are valid for all multi domains) </b>
 in /etc/aliases  contain some defaults. this can modified and added from you. at last you can redirect all above to one account like this:
 exmaple from prod:
 <pre>
@@ -106,5 +106,13 @@ root: your@emailadress.com
 check with <pre>postconf alias_maps</pre>  if postfix map the correct hash file
 on the command generate the aliases immidietly
 <pre> newaliases && systemctl reload postfix.service</pre>
+
+<b> wildcard acceptions for domain </b>
+for this in main.cf add <pre> virtual_alias_maps = hash:/etc/postfix/virtual_alias </pre>
+create the file <i>..virtual_alias</i> and include your wildcard for needed domain
+<pre>
+@exmaple.net     your@emailadress.info
+</pre>
+remap postfix with alias <pre> newaliases && postmap /etc/postfix/virtual_alias  && systemctl reload postfix.service</pre>
 
 ### [Aysad Kozanoglu | Espresto AG] ###

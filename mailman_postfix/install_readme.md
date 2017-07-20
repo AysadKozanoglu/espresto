@@ -73,7 +73,7 @@ Alias /images/mailman/ /usr/share/images/mailman/
 
 ## for postfix multiple domains
 
-Define the domain list as hash file or as list in the config file. 
+<b>Define the domain list(multiple domains acceptions) as hash file or as list in the config file. </b>
 <pre>
 vim /etc/postfix/main.cf
 virtual_alias_domains = hash:/etc/postfix/virtual_domains
@@ -93,5 +93,18 @@ example from prod:
 mydestination = example.net, mailman.example.com, localhost
 </pre>
 
+<b> define aliases  (also for multiple domains valid) </b>
+in /etc/aliases  contain some defaults. this can modified and added from you. at last you can redirect all above to one account like this:
+exmaple from prod:
+<pre>
+webmaster: root
+www: root
+ftp: root
+security: root
+root: your@emailadress.com
+</pre>
+check with <pre>postconf alias_maps</pre>  if postfix map the correct hash file
+on the command generate the aliases immidietly
+<pre> newaliases && systemctl reload postfix.service</pre>
 
 ### [Aysad Kozanoglu | Espresto AG] ###

@@ -71,6 +71,21 @@ Alias /pipermail/ /var/lib/mailman/archives/public/
 
 Alias /images/mailman/ /usr/share/images/mailman/
 
+## for postfix multiple domains
 
+Define the domain list as hash file or as list in the config file. 
+<pre>
+vim /etc/postfix/main.cf
+virtual_alias_domains = hash:/etc/postfix/virtual_domains
+
+vim /etc/postfix/virtual_domains
+example.net   #domain
+example.com   #domain
+example.at    #domain
+
+postmap /etc/postfix/virtual_domains
+/etc/init.d/postfix reload
+
+</pre>
 
 ### [Aysad Kozanoglu | Espresto AG] ###

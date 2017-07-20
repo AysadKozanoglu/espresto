@@ -85,7 +85,13 @@ example.at    #domain
 
 postmap /etc/postfix/virtual_domains
 /etc/init.d/postfix reload
-
 </pre>
+
+after modify main.cf parameter mydestinations
+example from prod:
+<pre>
+mydestination = example.net, mailman.example.com, localhost
+</pre>
+
 
 ### [Aysad Kozanoglu | Espresto AG] ###

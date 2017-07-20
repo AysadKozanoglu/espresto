@@ -87,10 +87,10 @@ postmap /etc/postfix/virtual_domains
 /etc/init.d/postfix reload
 </pre>
 
-after modify main.cf parameter mydestinations
+after modify main.cf parameter add to mydestinations parameter
 example from prod:
 <pre>
-mydestination = example.net, mailman.example.com, localhost
+mydestination = example.net, example.com, example.at, mailman.example.com, localhost
 </pre>
 
 <b> define aliases  (the users are valid for all multi domains) </b>

@@ -1,4 +1,4 @@
- Install Mailman in Debian
+ Install Mailman in Debian jessie 8.8 64bit
 
 <pre>
 apt-get install mailman
